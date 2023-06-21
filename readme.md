@@ -17,6 +17,8 @@
 
 ```bash
 npx create-react-app yourProjectName --template typescript
+# 或者
+npm create vite@latest yourProjectName --template react-ts
 ```
 
 ## 运行
