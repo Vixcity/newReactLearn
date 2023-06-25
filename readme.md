@@ -17,13 +17,15 @@
 
 - 组件化
 - 数据驱动视图
-  - UI = f(state)
+  - UI = f(state)
 
 ## 脚手架
 
 ```bash
 npx create-react-app yourProjectName --template typescript
+
 # 或者
+
 npm create vite@latest yourProjectName --template react-ts
 ```
 
@@ -50,4 +52,9 @@ npm run build
 ## 初始化时的一些坑
 
 - 安装 eslint
-  - https://www.jb51.net/article/253083.htm
+  - https://www.jb51.net/article/253083.htm
+
+## husky
+- 一个 git hook 工具
+- 在 git commit 之前执行自定义的命令
+- 如执行代码风格的检查，避免提交非规范代码

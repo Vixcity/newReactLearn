@@ -6,6 +6,13 @@
       "dom.iterable",
       "esnext"
     ],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./src",    
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -22,5 +29,8 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
