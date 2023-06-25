@@ -31,11 +31,7 @@ module.exports = {
 		"react"
 	],
 	"rules": {
-		// 缩进
-		"indent": [
-			"error",
-			"2"
-		],
+		"@typescript-eslint/ban-ts-comment": "off",
 		"linebreak-style": [
 			"error",
 			"windows"
