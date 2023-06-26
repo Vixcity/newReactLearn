@@ -29,7 +29,7 @@ const List1: FC = () => {
 
   return (
     <div>
-      <h1>问卷发布页</h1>
+      <h1>问卷列表页1</h1>
       {questionList.map((question) => {
         const { id, title, isPublished } = question;
         return (
