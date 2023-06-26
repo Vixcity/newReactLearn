@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import "./List1.css";
+import QuestionCard from "QuestionCard";
 
 const List1: FC = () => {
   // 列表页
@@ -25,32 +26,19 @@ const List1: FC = () => {
       isPublished: true,
     },
   ];
-  function edit(id: string) {
-    console.log("edit", id);
-  }
+
   return (
     <div>
       <h1>问卷发布页</h1>
       {questionList.map((question) => {
         const { id, title, isPublished } = question;
         return (
-          <div key={id} className="list-item">
-            <strong>{title}</strong>
-            &nbsp;
-            {isPublished ? (
-              <span style={{ color: "green" }}>已发布</span>
-            ) : (
-              <span>未发布</span>
-            )}
-            &nbsp;
-            <button
-              onClick={() => {
-                edit(id);
-              }}
-            >
-              编辑问卷
-            </button>
-          </div>
+          <QuestionCard
+            key={id}
+            id={id}
+            title={title}
+            isPublished={isPublished}
+          />
         );
       })}
     </div>
