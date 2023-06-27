@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import "./QuestionCard.css";
 
 type PropsType = {
@@ -20,6 +20,14 @@ const QuestionCard: FC<PropsType> = (props) => {
   function del(id: string) {
     deleteQuestion && deleteQuestion(id);
   }
+
+  useEffect(() => {
+    console.log("question card mounted");
+
+    return () => {
+      console.log("question card destroy", id);
+    };
+  }, []);
 
   return (
     <div key={id} className="list-item">
