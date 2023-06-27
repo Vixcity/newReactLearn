@@ -4,9 +4,6 @@ import "./List2.css";
 import QuestionCard from "QuestionCard";
 
 const List1: FC = () => {
-//   useEffect(() => {
-//     console.log("ajax网络请求");
-//   }, []);
   // 列表页
   const [questionList, setQuestionList] = useState([
     {
@@ -31,9 +28,9 @@ const List1: FC = () => {
     },
   ]);
 
-//   useEffect(() => {
-//     console.log("question list changed");
-//   }, [questionList]);
+  useEffect(() => {
+    console.log("question list changed");
+  }, [questionList]);
 
   function add() {
     // 新增
