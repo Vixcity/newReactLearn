@@ -4,13 +4,14 @@ import "./App.css";
 import List2 from "List2";
 // import ImmerDemo from "immerDemo";
 // import UseRefDemo from "useRefDemo";
-import UseMemoDemo from "useMemoDemo";
+// import UseMemoDemo from "useMemoDemo";
+import UseCallback from "useCallback";
 
 function App() {
   return (
     <>
       <List2></List2>
-      <UseMemoDemo></UseMemoDemo>
+      <UseCallback></UseCallback>
     </>
   );
 }
