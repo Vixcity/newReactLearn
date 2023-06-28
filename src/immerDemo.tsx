@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { produce } from "immer";
-import QuestionCard from "QuestionCard";
+import QuestionCard from "./components/QuestionCard";
 
 const ImmerDemo: FC = () => {
   const [userInfo, setUserInfo] = useState({ name: "温鑫", age: 20 });

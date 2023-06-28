@@ -1,4 +1,5 @@
 import React, { FC, useEffect } from "react";
+import classnames from "classnames";
 import "./QuestionCard.css";
 
 type PropsType = {
@@ -29,8 +30,13 @@ const QuestionCard: FC<PropsType> = (props) => {
     };
   }, []);
 
+  // let itemClassName = "list-item";
+  // if (isPublished) itemClassName += " published";
+
+  const itemClassName = classnames("list-item", { published: isPublished });
+
   return (
-    <div key={id} className="list-item">
+    <div key={id} className={itemClassName}>
       <strong>{title}</strong>
       &nbsp;
       {isPublished ? (
