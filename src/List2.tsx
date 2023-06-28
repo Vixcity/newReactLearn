@@ -1,6 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
 import { produce } from "immer";
-import "./List2.css";
 import QuestionCard from "./components/QuestionCard";
 
 const List1: FC = () => {
