@@ -23,24 +23,29 @@ const Demo: FC = () => {
   //   setChecked(!checked);
   // }
 
-  const [selectedCityList, setSelectedCityList] = useState<string[]>([]);
-  function handleCityChange(event: ChangeEvent<HTMLInputElement>) {
-    const city = event.target.value;
-    if (selectedCityList.includes(city)) {
-      // 移除
-      setSelectedCityList(
-        selectedCityList.filter((c) => {
-          if (c === city) return false;
-          return true;
-        })
-      );
-    } else {
-      // 添加
-      setSelectedCityList(
-        selectedCityList.concat(city)
-      );
-    }
-  }
+  // const [selectedCityList, setSelectedCityList] = useState<string[]>([]);
+  // function handleCityChange(event: ChangeEvent<HTMLInputElement>) {
+  //   const city = event.target.value;
+  //   if (selectedCityList.includes(city)) {
+  //     // 移除
+  //     setSelectedCityList(
+  //       selectedCityList.filter((c) => {
+  //         if (c === city) return false;
+  //         return true;
+  //       })
+  //     );
+  //   } else {
+  //     // 添加
+  //     setSelectedCityList(
+  //       selectedCityList.concat(city)
+  //     );
+  //   }
+  // }
+
+  // const [lang, setLang] = useState("JS");
+  // function handleChange(event: ChangeEvent<HTMLSelectElement>) {
+  //   setLang(event.target.value);
+  // }
 
   return (
     <>
@@ -87,7 +92,7 @@ const Demo: FC = () => {
       />
       {JSON.stringify(checked)} */}
 
-      <label htmlFor="checkbox1">北京</label>
+      {/* <label htmlFor="checkbox1">北京</label>
       <input
         type="checkbox"
         id="checkbox1"
@@ -112,8 +117,14 @@ const Demo: FC = () => {
         onChange={handleCityChange}
       />
       {JSON.stringify(selectedCityList)}
-      {/* 提交到表单上面去，可以通过这个方式提交 */}
-      <input type="hidden" name="cities" value={JSON.stringify(selectedCityList)}/>
+      { 提交到表单上面去，可以通过这个方式提交 }
+      <input type="hidden" name="cities" value={JSON.stringify(selectedCityList)}/> */}
+
+      {/* <select value={lang} onChange={handleChange}>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JS">JS</option>
+      </select> */}
     </>
   );
 };
