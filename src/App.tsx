@@ -2,18 +2,19 @@ import React from "react";
 // import { useGetInfo } from "./hooks/index";
 // import { useTitle } from "ahooks";
 import "./App.scss";
-// import List1 from "List1";
-// import List2 from "List2";
-// import ImmerDemo from "immerDemo";
-// import UseRefDemo from "useRefDemo";
-// import UseMemoDemo from "useMemoDemo";
-// import UseCallback from "useCallback";
-// import ClosureTrap from "closureTrap";
+// import List1 from "./pages/List1";
+// import List2 from "./pages/List2";
+// import ImmerDemo from "./pages/immerDemo";
+// import UseRefDemo from "./pages/useRefDemo";
+// import UseMemoDemo from "./pages/useMemoDemo";
+// import UseCallback from "./pages/useCallback";
+// import ClosureTrap from "./pages/closureTrap";
 // import StyleComponentsDemo from "styledComponentsDemo";
-import FormElement from "FormElementDemo";
-// import ContextDemo from "./ContextDemo/ContextDemo";
-// import CountReducer from "CountReduce";
-import TodoReducer from "TodoReducer/index";
+import FormElement from "./pages/FormElementDemo";
+// import ContextDemo from "./pages/ContextDemo/ContextDemo";
+// import CountReducer from "./pages/CountReduce";
+// import Count from "./pages/CountRedux";
+import TodoListDemo from "pages/TodoList";
 
 function App() {
   // const { loading, info } = useGetInfo();
@@ -26,7 +27,9 @@ function App() {
       {/* <List2></List2> */}
       {/* <ContextDemo /> */}
       {/* <CountReducer /> */}
-      <TodoReducer />
+      {/* <TodoReducer /> */}
+      {/* <Count /> */}
+      <TodoListDemo />
     </>
   );
 }

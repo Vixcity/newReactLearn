@@ -1,18 +1,8 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import { produce } from "immer";
-import QuestionCard from "./components/QuestionCard";
+import QuestionCard from "../components/QuestionCard";
 
-const ImmerDemo: FC = () => {
-  const [userInfo, setUserInfo] = useState({ name: "温鑫", age: 20 });
-
-  function changeAge() {
-    setUserInfo(
-      produce((draft) => {
-        draft.age++;
-      })
-    );
-  }
-
+const List1: FC = () => {
   // 列表页
   const [questionList, setQuestionList] = useState([
     {
@@ -37,6 +27,10 @@ const ImmerDemo: FC = () => {
     },
   ]);
 
+  useEffect(() => {
+    console.log("question list changed");
+  }, [questionList]);
+
   function add() {
     // 新增
     setQuestionList(
@@ -49,11 +43,29 @@ const ImmerDemo: FC = () => {
       })
     );
   }
+
+  function deleteQuestion(id: string) {
+    // 删除
+    setQuestionList(
+      produce((draft) => {
+        const index = draft.findIndex((q) => q.id === id);
+        draft.splice(index, 1);
+      })
+    );
+  }
+
+  function publishQuestion(id: string) {
+    // 修改
+    setQuestionList(
+      produce((draft) => {
+        const q = draft.find((q) => q.id === id);
+        if (q) q.isPublished = true;
+      })
+    );
+  }
+
   return (
     <div>
-      <h1>ImmerDemo</h1>
-      <div>{JSON.stringify(userInfo)}</div>
-      <button onClick={changeAge}>Immer更改State的值</button>
       <h1>问卷列表页2</h1>
       {questionList.map((question) => {
         const { id, title, isPublished } = question;
@@ -63,6 +75,8 @@ const ImmerDemo: FC = () => {
             id={id}
             title={title}
             isPublished={isPublished}
+            deleteQuestion={deleteQuestion}
+            publishQuestion={publishQuestion}
           />
         );
       })}
@@ -73,4 +87,4 @@ const ImmerDemo: FC = () => {
   );
 };
 
-export default ImmerDemo;
+export default List1;

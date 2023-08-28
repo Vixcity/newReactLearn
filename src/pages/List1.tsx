@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import "./List1.css";
-import QuestionCard from "./components/QuestionCard";
+import QuestionCard from "../components/QuestionCard";
 
 const List1: FC = () => {
   // 列表页
