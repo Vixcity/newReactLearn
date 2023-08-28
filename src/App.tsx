@@ -11,6 +11,9 @@ import "./App.scss";
 // import ClosureTrap from "closureTrap";
 // import StyleComponentsDemo from "styledComponentsDemo";
 import FormElement from "FormElementDemo";
+// import ContextDemo from "./ContextDemo/ContextDemo";
+// import CountReducer from "CountReduce";
+import TodoReducer from "TodoReducer/index";
 
 function App() {
   // const { loading, info } = useGetInfo();
@@ -21,6 +24,9 @@ function App() {
       <FormElement />
       {/* <p>{loading ? "加载中" : info}</p> */}
       {/* <List2></List2> */}
+      {/* <ContextDemo /> */}
+      {/* <CountReducer /> */}
+      <TodoReducer />
     </>
   );
 }
