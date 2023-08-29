@@ -14,7 +14,8 @@ import FormElement from "./pages/FormElementDemo";
 // import ContextDemo from "./pages/ContextDemo/ContextDemo";
 // import CountReducer from "./pages/CountReduce";
 // import Count from "./pages/CountRedux";
-import TodoListDemo from "pages/TodoList";
+// import TodoListDemo from "pages/TodoList";
+import MobxBasicDemo from "pages/MobxBasicDemo";
 
 function App() {
   // const { loading, info } = useGetInfo();
@@ -29,7 +30,8 @@ function App() {
       {/* <CountReducer /> */}
       {/* <TodoReducer /> */}
       {/* <Count /> */}
-      <TodoListDemo />
+      {/* <TodoListDemo /> */}
+      <MobxBasicDemo />
     </>
   );
 }
