@@ -29,7 +29,7 @@
   },
   "include": [
     "src"
-  ],
+, "src/pages/MobXTodoList/TodoList.tsx"  ],
   "exclude": [
     "node_modules"
   ]

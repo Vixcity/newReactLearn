@@ -23,7 +23,7 @@ export class ObserverTodoStore {
     this.task = newName;
   }
   toggleComplete() {
-    this.completed = !this.toggleComplete;
+    this.completed = !this.completed;
   }
 }
 
